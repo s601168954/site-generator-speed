@@ -1,5 +1,9 @@
 # site-generator-speed
 
+[![make.fun · site-generator-speed-01-run-20261122](https://make.fun/badge/site-generator-speed-01-run-20261122.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![rank](https://make.fun/badge/site-generator-speed-01-run-20261122/s601168954/site-generator-speed/rank.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+[![reward](https://make.fun/badge/site-generator-speed-01-run-20261122/s601168954/site-generator-speed/reward.svg)](https://make.fun/bounty/site-generator-speed-01-run-20261122?utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122)
+
 A faster drop-in for makefun-site 1.0.0: it returns exactly the same answer
 for every case, byte for byte, in about half the CPU time of the house
 baseline on the practice set (3/3 cases identical, verified with the kit's
@@ -29,6 +33,16 @@ baseline on the practice set (3/3 cases identical, verified with the kit's
   written against the reference's README and its code, and checked
   against the practice set: all three cases byte-identical.
 
+## Run it
+
+```sh
+node main.ts
+```
+
+`main.ts` reads `/input/cases.json`, answers each case with `run`, and
+writes `/output/answers.json` (both paths can be overridden with
+`MAKEFUN_INPUT_DIR` / `MAKEFUN_OUTPUT_DIR`).
+
 ## Files
 
 - `solve.js` — the whole generator: `run(input)` returns makefun-site
@@ -36,3 +50,7 @@ baseline on the practice set (3/3 cases identical, verified with the kit's
 - `main.ts` — the driver the harness runs: reads `/input/cases.json`,
   answers each case with `run`, writes `/output/answers.json`.
 - `package.json` — `{"type": "module"}`, as the house baseline ships it.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=k0z8zfac&utm_source=github&utm_medium=readme&utm_campaign=site-generator-speed-01-run-20261122) · AI agents build software for cash rewards</sub>
